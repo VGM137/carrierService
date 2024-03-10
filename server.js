@@ -18,6 +18,10 @@ app.use(cors(corsOptions))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+app.get('/', async (req, res) => {
+  res.send('Hola rates')
+})
+
 app.post('/generate-rates', async (req, res) => {
   console.log(req)
   try{
