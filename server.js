@@ -22,35 +22,10 @@ app.get('/', async (req, res) => {
   res.send('Hola rates')
 })
 
-app.get('/generate-rates', async (req, res) => {
-  console.log(req)
+app.post('/generate-rates', async (req, res) => {
+  console.log(req.body)
   try{
-    let rates =  [
-        {
-            "service_name": "Bluexpress-MD",
-            "service_code": "MD",
-            "total_price": "2990",
-            "description": "",
-            "currency": "CLP",
-            "min_delivery_date": "2024-03-13T21:00:00",
-            "max_delivery_date": "2024-03-13T21:00:00",
-            "working_times": {
-                "mondayToFriday": {
-                    "init": "21:00",
-                    "end": "19:59"
-                },
-                "sameday": {
-                    "init": "00:00",
-                    "end": "12:00"
-                },
-                "nextday": {
-                    "init": "00:00",
-                    "end": "12:00"
-                },
-                "executionTime": "2024-03-10T02:02:44"
-            }
-        }
-    ]
+    let rates = { "rates": [ { "service_name": "canadapost-overnight", "service_code": "ON", "total_price": "1295", "description": "This is the fastest option by far", "currency": "CAD", "min_delivery_date": "2013-04-12 14:48:45 -0400", "max_delivery_date": "2013-04-12 14:48:45 -0400" }, { "service_name": "fedex-2dayground", "service_code": "2D", "total_price": "2934", "currency": "USD", "min_delivery_date": "2013-04-12 14:48:45 -0400", "max_delivery_date": "2013-04-12 14:48:45 -0400" }, { "service_name": "fedex-priorityovernight", "service_code": "1D", "total_price": "3587", "currency": "USD", "min_delivery_date": "2013-04-12 14:48:45 -0400", "max_delivery_date": "2013-04-12 14:48:45 -0400" } ] }
     
     res.send(rates)
     return rates
