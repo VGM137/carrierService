@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
   res.send('Hola rates')
 })
 
-app.post('/generate-rates', async (req, res) => {
+app.get('/generate-rates', async (req, res) => {
   console.log(req)
   try{
     let rates =  [
