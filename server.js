@@ -6,7 +6,7 @@ require('dotenv').config();
 
 
 var corsOptions = {
-  origin: ['https://dev.allnutrition.cl', 'https://allnutrition.cl'],
+  origin: ['https://dev-allcheckout-extensibility.myshopify.com', 'https://dev.allnutrition.cl', 'https://allnutrition.cl'],
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
