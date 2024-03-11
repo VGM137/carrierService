@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/generate-rates', async (req, res) => {
-  console.log('tems', req.body.items)
+  console.log('items', req.body.rate.items)
   try{
     let rates = { 
       "rates": [ 
